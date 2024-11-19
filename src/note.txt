@@ -1,0 +1,5 @@
+we are joining two folders into one
+
+src has both of the folders src so need to go though the files to find
+the most up to date versions of the files
+then remove the directories in the src
