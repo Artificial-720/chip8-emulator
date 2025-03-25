@@ -1,15 +1,14 @@
 NAME = chip8
-CFLAGS = -std=c99 -Wall -Wextra
+CFLAGS = -std=c99 -Wall -Wextra -Werror -g
 LIBFLAGS = -lGL -lglfw -lGLEW
-MAINOBJS = src/main.o src/chip8.o
+SRC_DIR := src
 
-# all:
-	# $(CC) $(CFLAGS) -g -o main main.c chip8.c -lGL -lglfw -lGLEW
+SRC := $(wildcard $(SRC_DIR)/*.c)
+OBJS := $(SRC:$(SRC_DIR)/%.c=$(SRC_DIR)/%.o)
 
 
-
-all: $(MAINOBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(MAINOBJS) $(LIBFLAGS)
+all: $(OBJS)
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(LIBFLAGS)
 
 
 clean:
