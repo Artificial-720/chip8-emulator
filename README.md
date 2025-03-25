@@ -19,12 +19,13 @@ https://github.com/Timendus/chip8-test-suite
 
 ## Keybindings
 
+
+```
 F11 - Toggle full screen
 Esc - Exit
 B - Toggle debug
 N - Step
 
-```
 CHIP-8 Key   Keyboard
 ---------   ---------
 1 2 3 C     1 2 3 4
